@@ -1,0 +1,10 @@
+<h2>Waardelijsten</h2>
+<ul class="waardelijsten">
+  <li (click)="onSelect(waardelijst)"
+      *ngFor="let waardelijst of waardelijsten"
+      [class.selected]="waardelijst === selectedWaardelijst">
+    <span class="badge">{{waardelijst.id}}</span> {{waardelijst.name}}
+  </li>
+</ul>
+
+<app-waardelijst-detail [waardelijst]="selectedWaardelijst"></app-waardelijst-detail>
