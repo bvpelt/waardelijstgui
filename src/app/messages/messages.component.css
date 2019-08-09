@@ -33,3 +33,10 @@ button.clear {
   color: #333;
   margin-bottom: 12px;
 }
+
+.messages {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 28em;
+}
