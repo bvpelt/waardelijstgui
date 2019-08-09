@@ -5,16 +5,25 @@ import {Injectable} from '@angular/core';
 })
 export class MessageService {
 
-    messages: string[] = [];
+    private messages: string[] = [];
+    private mcount: number = 0;
 
     constructor() {
     }
 
-    add(message: string) {
-        this.messages.push(message);
+    public add(message: string): void {
+        let msg: string;
+        this.mcount++;
+        msg = this.zeroPad(this.mcount, 5) + ': ' + message;
+        this.messages.push(msg);
     }
 
-    clear() {
+    public clear(): void  {
         this.messages = [];
+    }
+
+    private  zeroPad(num, places): String  {
+        const zero = places - num.toString().length + 1;
+        return Array(+(zero > 0 && zero)).join("0") + num;
     }
 }
