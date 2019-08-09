@@ -1,0 +1,8 @@
+<h3>Waardelijsten home</h3>
+<div class="grid grid-pad">
+    <a *ngFor="let waardelijst of waardelijsten" class="col-1-4" routerLink="/detail/{{waardelijst.id}}">
+        <div class="module waardelijst">
+            <h4>{{waardelijst.name}}</h4>
+        </div>
+    </a>
+</div>

@@ -1,10 +1,14 @@
 <h2>Waardelijsten</h2>
 <ul class="waardelijsten">
-  <li (click)="onSelect(waardelijst)"
-      *ngFor="let waardelijst of waardelijsten"
-      [class.selected]="waardelijst === selectedWaardelijst">
-    <span class="badge">{{waardelijst.id}}</span> {{waardelijst.name}}
+  <li *ngFor="let waardelijst of waardelijsten"
+      [class.selected]="waardelijst === selectedWaardelijst"
+      (click)="onSelect(waardelijst)">
+    <a routerLink="/detail/{{waardelijst.id}}">
+      <span class="badge">{{waardelijst.id}}</span> {{waardelijst.name}}
+    </a>
   </li>
 </ul>
 
+<!--
 <app-waardelijst-detail [waardelijst]="selectedWaardelijst"></app-waardelijst-detail>
+-->

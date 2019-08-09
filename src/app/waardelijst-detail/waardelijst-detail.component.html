@@ -1,9 +1,10 @@
 <div *ngIf="waardelijst">
-  <h2>{{waardelijst.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{waardelijst.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="waardelijst.name" placeholder="name"/>
-    </label>
-  </div>
+    <h2>{{waardelijst.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{waardelijst.id}}</div>
+    <div>
+        <label>name:
+            <input [(ngModel)]="waardelijst.name" placeholder="name"/>
+        </label>
+    </div>
+    <button (click)="goBack()">go back</button>
 </div>

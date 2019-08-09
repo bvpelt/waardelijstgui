@@ -34,5 +34,14 @@ https://joshtronic.com/2018/05/08/how-to-install-nodejs-10-on-ubuntu-1804-lts/
 - https://angular.io/tutorial
 - https://zakelijk.kadaster.nl/waardelijsten 
 
+# Git
+working in branch develop
+creating branch develop ```git checkout -b develop```
+
+merging into master (see https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging )
+```
+git checkout master # switch to branch master
+git merge develop   # add changes from develop in master
+```
 # Work
 - restart at: https://angular.io/tutorial/toh-pt5
