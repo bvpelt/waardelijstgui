@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {WaardelijstComponent} from './waardelijst.component';
+import {WaardelijstSearchComponent} from './waardelijst-search.component';
 
-describe('WaardelijstComponent', () => {
-    let component: WaardelijstComponent;
-    let fixture: ComponentFixture<WaardelijstComponent>;
+describe('WaardelijstSearchComponent', () => {
+    let component: WaardelijstSearchComponent;
+    let fixture: ComponentFixture<WaardelijstSearchComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [WaardelijstComponent]
+            declarations: [WaardelijstSearchComponent]
         })
             .compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(WaardelijstComponent);
+        fixture = TestBed.createComponent(WaardelijstSearchComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

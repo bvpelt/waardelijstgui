@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 
@@ -31,5 +31,10 @@ export class WaardelijstDetailComponent implements OnInit {
 
     goBack(): void {
         this.location.back();
+    }
+
+    save(): void {
+        this.waardelijstService.updateWaardelijst(this.waardelijst)
+            .subscribe(() => this.goBack());
     }
 }

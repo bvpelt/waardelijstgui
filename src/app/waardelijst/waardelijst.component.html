@@ -1,4 +1,27 @@
 <h2>Waardelijsten</h2>
+
+<div>
+    <label>Waardelijst name:
+        <input #waardelijstName/>
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(waardelijstName.value); waardelijstName.value=''">
+        add
+    </button>
+</div>
+
+<ul class="waardelijsten">
+    <li *ngFor="let waardelijst of waardelijsten">
+        <a routerLink="/detail/{{waardelijst.id}}">
+            <span class="badge">{{waardelijst.id}}</span> {{waardelijst.name}}
+        </a>
+        <button (click)="delete(waardelijst)" class="delete"
+                title="delete waardelijst">x
+        </button>
+    </li>
+</ul>
+
+<!--
 <ul class="waardelijsten">
   <li *ngFor="let waardelijst of waardelijsten"
       [class.selected]="waardelijst === selectedWaardelijst"
@@ -8,7 +31,4 @@
     </a>
   </li>
 </ul>
-
-<!--
-<app-waardelijst-detail [waardelijst]="selectedWaardelijst"></app-waardelijst-detail>
 -->

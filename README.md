@@ -43,5 +43,16 @@ merging into master (see https://git-scm.com/book/en/v2/Git-Branching-Basic-Bran
 git checkout master # switch to branch master
 git merge develop   # add changes from develop in master
 ```
+
+commit naar develop en daarna gebruik maken van develop
+```
+ git push --set-upstream origin develop
+```
+# Network
+Setup in memory server
+```
+npm install angular-in-memory-web-api --save
+```
+
 # Work
 - restart at: https://angular.io/tutorial/toh-pt5
