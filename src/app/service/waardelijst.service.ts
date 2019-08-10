@@ -3,7 +3,7 @@ import {Observable, of} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {catchError, map, tap} from 'rxjs/operators';
 
-import {Waardelijst} from './waardelijst';
+import {Waardelijst} from '../model/waardelijst';
 import {MessageService} from './message.service';
 
 @Injectable({
@@ -14,7 +14,8 @@ export class WaardelijstService {
     httpOptions = {
         headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
-    private waardelijstUrl = 'api/waardelijsten';  // URL to web api
+    //private waardelijstUrl = 'api/waardelijsten';  // URL to web api
+    private waardelijstUrl = 'http://localhost:8080/waardelijsten';
 
     constructor(private http: HttpClient, private messageService: MessageService) {
     }

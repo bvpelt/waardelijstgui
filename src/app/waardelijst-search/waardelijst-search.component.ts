@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable, Subject} from 'rxjs';
 import {debounceTime, distinctUntilChanged, switchMap} from 'rxjs/operators';
-import {Waardelijst} from '../waardelijst';
-import {WaardelijstService} from '../waardelijst.service';
+import {Waardelijst} from '../model/waardelijst';
+import {WaardelijstService} from '../service/waardelijst.service';
 
 @Component({
     selector: 'app-waardelijst-search',

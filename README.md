@@ -54,5 +54,11 @@ Setup in memory server
 npm install angular-in-memory-web-api --save
 ```
 
+# Routing
+- two routes one app: https://stackoverflow.com/questions/34628848/angular2-multiple-router-outlet-in-the-same-template
+
 # Work
 - restart at: https://angular.io/tutorial/toh-pt5
+
+# Authentication
+- https://jasonwatmore.com/post/2019/06/26/angular-8-basic-http-authentication-tutorial-example#auth-guard-ts

@@ -1,4 +1,4 @@
-import {Waardelijst} from './waardelijst';
+import {Waardelijst} from './model/waardelijst';
 
 export const WAARDELIJSTEN: Waardelijst[] = [
     {id: 11, name: 'BAGAdresseerbaarObject'},

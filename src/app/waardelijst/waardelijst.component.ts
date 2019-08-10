@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
-import {Waardelijst} from '../waardelijst';
-import {WaardelijstService} from '../waardelijst.service';
+import {Waardelijst} from '../model/waardelijst';
+import {WaardelijstService} from '../service/waardelijst.service';
 
 @Component({
     selector: 'app-waardelijst',

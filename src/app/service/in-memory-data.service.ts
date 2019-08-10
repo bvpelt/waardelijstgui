@@ -1,5 +1,5 @@
 import {InMemoryDbService} from 'angular-in-memory-web-api';
-import {Waardelijst} from './waardelijst';
+import {Waardelijst} from '../model/waardelijst';
 import {Injectable} from '@angular/core';
 
 @Injectable({

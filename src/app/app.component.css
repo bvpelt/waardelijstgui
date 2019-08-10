@@ -30,3 +30,17 @@ nav a:hover {
 nav a.active {
     color: #039be5;
 }
+
+.top-level {
+/*    background-color: bisque; */
+    width: 100%;
+    display: flex;
+}
+.left-panel {
+/*    background-color: #039be5; */
+    width: 50%;
+}
+.right-panel {
+/*    background-color: #444444; */
+    width: 50%;
+}
