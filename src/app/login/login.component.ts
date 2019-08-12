@@ -21,12 +21,16 @@ export class LoginComponent implements OnInit {
                 private route: ActivatedRoute,
                 private router: Router,
                 private authenticationService: AuthenticationService) { // redirect to home if already logged in
+        console.log('constructor LoginComponent')
         if (this.authenticationService.currentUserValue) {
             this.router.navigate(['/']);
+        } else {
+            console.log('LoginComponent: no current user');
         }
     }
 
     ngOnInit() {
+        console.log('LoginComponent: ngOnInit');
         this.loginForm = this.formBuilder.group({
             username: ['', Validators.required],
             password: ['', Validators.required]
@@ -42,6 +46,8 @@ export class LoginComponent implements OnInit {
     }
 
     onSubmit() {
+        console.log('LoginComponent: onSubmit');
+
         this.submitted = true;
 
         // stop here if form is invalid
@@ -49,6 +55,7 @@ export class LoginComponent implements OnInit {
             return;
         }
 
+        console.log('LoginComponent: try login');
         this.loading = true;
         this.authenticationService.login(this.f.username.value, this.f.password.value)
             .pipe(first())

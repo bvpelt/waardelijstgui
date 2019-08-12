@@ -18,10 +18,12 @@ export class AppComponent {
         private router: Router,
         private authenticationService: AuthenticationService
     ) {
+        console.log('AppComponent')
         this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
     }
 
     logout() {
+        console.log('AppComponent: logout');
         this.authenticationService.logout();
         this.router.navigate(['/login']);
     }

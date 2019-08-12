@@ -22,8 +22,10 @@ export class AuthenticationService {
     }
 
     login(username: string, password: string) {
+        console.log('AuthenticationService: try login with username: ' + username + ' password: ' + password);
         return this.http.post<any>(`${environment.apiUrl}/users/authenticate`, {username, password})
             .pipe(map(user => {
+                console.log('AuthenticationService: ' + user);
                 // store user details and basic auth credentials in local storage to keep user logged in between page refreshes
                 user.authdata = window.btoa(username + ':' + password);
                 localStorage.setItem('currentUser', JSON.stringify(user));
