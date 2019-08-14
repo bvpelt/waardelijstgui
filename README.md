@@ -62,3 +62,4 @@ npm install angular-in-memory-web-api --save
 
 # Authentication
 - https://jasonwatmore.com/post/2019/06/26/angular-8-basic-http-authentication-tutorial-example#auth-guard-ts
+- http://websystique.com/spring-security/angularjs-basic-authentication-using-spring-security/

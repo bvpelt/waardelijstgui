@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
-import {first} from 'rxjs/operators';
+import {first, tap} from 'rxjs/operators';
 import {AuthenticationService} from '../service/authentication.service';
 
 @Component({
@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
     submitted = false;
     returnUrl: string;
     error = '';
+    title = 'Login'
 
     constructor(private formBuilder: FormBuilder,
                 private route: ActivatedRoute,
@@ -58,7 +59,9 @@ export class LoginComponent implements OnInit {
         console.log('LoginComponent: try login');
         this.loading = true;
         this.authenticationService.login(this.f.username.value, this.f.password.value)
-            .pipe(first())
+            .pipe(
+                first()
+            )
             .subscribe(
                 data => {
                     this.router.navigate([this.returnUrl]);

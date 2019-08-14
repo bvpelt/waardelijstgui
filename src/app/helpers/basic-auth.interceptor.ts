@@ -18,7 +18,7 @@ export class BasicAuthInterceptor implements HttpInterceptor {
                 }
             });
         }
-
+        console.log('BasicAuthInterceptor: using user: ' + currentUser);
         return next.handle(request);
     }
 }

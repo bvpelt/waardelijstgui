@@ -12,7 +12,7 @@ import {WaardelijstComponent} from './waardelijst/waardelijst.component';
 import {WaardelijstSearchComponent} from './waardelijst-search/waardelijst-search.component';
 import {MessagesComponent} from './messages/messages.component';
 // used to create fake backend
-import {fakeBackendProvider} from './helpers/fake-backend';
+// import {fakeBackendProvider} from './helpers/fake-backend';
 import {BasicAuthInterceptor} from './helpers/basic-auth.interceptor';
 import {ErrorInterceptor} from './helpers/error.interceptor';
 
@@ -48,10 +48,10 @@ import {LoginComponent} from './login/login.component';
     ],
     providers: [
         {provide: HTTP_INTERCEPTORS, useClass: BasicAuthInterceptor, multi: true},
-        {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
+        {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true} // ,
 
         // provider used to create fake backend
-        fakeBackendProvider
+        // fakeBackendProvider
     ],
     bootstrap: [AppComponent]
 })

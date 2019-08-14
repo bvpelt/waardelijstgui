@@ -13,6 +13,8 @@ export class HomeComponent implements OnInit {
     loading = false;
     users: User[];
 
+    title = 'Waardelijsten';
+
     constructor(private userService: UserService) {
     }
 

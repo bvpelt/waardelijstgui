@@ -1,0 +1,21 @@
+.form-group {
+    width:30em;
+}
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 6em;
+    text-align: left;
+}
+input {
+    display: inline-block;
+    float: left;
+    width: 15em;
+}
+.button {
+    display: block;
+    position: relative;
+    left: -204px;
+    top: 55px;
+}
