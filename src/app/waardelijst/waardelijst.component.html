@@ -11,7 +11,7 @@
 </div>
 
 <ul class="waardelijsten">
-    <li *ngFor="let waardelijst of waardelijsten">
+    <li *ngFor="let waardelijst of waardelijsten" (select)="onSelect(waardelijst)">
         <a routerLink="/detail/{{waardelijst.id}}">
             <span class="badge">{{waardelijst.id}}</span> {{waardelijst.name}}
         </a>
@@ -20,6 +20,8 @@
         </button>
     </li>
 </ul>
+
+<app-waardelijstentry *ngIf="selectedWaardelijst" [waardelijst]="selectedWaardelijst"></app-waardelijstentry>
 
 <!--
 <ul class="waardelijsten">

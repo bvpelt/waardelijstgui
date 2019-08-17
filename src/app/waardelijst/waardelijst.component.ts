@@ -11,6 +11,7 @@ import {WaardelijstService} from '../service/waardelijst.service';
 export class WaardelijstComponent implements OnInit {
 
     waardelijsten: Waardelijst[];
+    selectedWaardelijst: Waardelijst;
 
     constructor(private waardelijstService: WaardelijstService) {
     }
@@ -38,4 +39,10 @@ export class WaardelijstComponent implements OnInit {
         this.waardelijsten = this.waardelijsten.filter(h => h !== waardelijst);
         this.waardelijstService.deleteWaardelijst(waardelijst).subscribe();
     }
+
+    onSelect(waardelijst: Waardelijst) {
+            this.selectedWaardelijst = waardelijst;
+            this.waardelijstService.log("selected waardelijst: " + waardelijst.name);
+        }
+
 }

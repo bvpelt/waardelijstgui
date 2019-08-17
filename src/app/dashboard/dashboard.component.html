@@ -1,10 +1,15 @@
-<h3>Waardelijsten home</h3>
-<div class="grid grid-pad">
-    <a *ngFor="let waardelijst of waardelijsten" class="col-1-4" routerLink="/detail/{{waardelijst.id}}">
-        <div class="module waardelijst">
-            <h4>{{waardelijst.name}}</h4>
-        </div>
-    </a>
+<div class="app-dashboard">
+<!-- <h3>Waardelijsten home</h3> -->
+<div class="container">
+    <div class="grid grid-pad">
+        <a *ngFor="let waardelijst of waardelijsten" class="col-1-4" routerLink="/detail/{{waardelijst.id}}">
+            <div class="module waardelijst">
+                <h4>{{waardelijst.name}}</h4>
+            </div>
+        </a>
+    </div>
+    <div class="search">
+        <app-waardelijst-search></app-waardelijst-search>
+    </div>
 </div>
-
-<app-waardelijst-search></app-waardelijst-search>
+</div>

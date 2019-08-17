@@ -18,6 +18,7 @@ import {ErrorInterceptor} from './helpers/error.interceptor';
 
 import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './login/login.component';
+import { WaardelijstentryComponent } from './waardelijstentry/waardelijstentry.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import {LoginComponent} from './login/login.component';
         MessagesComponent,
         WaardelijstSearchComponent,
         HomeComponent,
-        LoginComponent
+        LoginComponent,
+        WaardelijstentryComponent
     ],
     providers: [
         {provide: HTTP_INTERCEPTORS, useClass: BasicAuthInterceptor, multi: true},

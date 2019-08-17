@@ -20,6 +20,6 @@ export class DashboardComponent implements OnInit {
 
     getWaardelijsten(): void {
         this.waardelijstService.getWaardelijsten()
-            .subscribe(waardelijsten => this.waardelijsten = waardelijsten.slice(1, 5));
+            .subscribe(waardelijsten => this.waardelijsten = waardelijsten.slice(0, 4));
     }
 }
