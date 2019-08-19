@@ -1,1 +1,17 @@
-<p>waardelijstentry works!</p>
+<div class="wrapper">
+    <div class="row">
+        <div class="box a">Code</div>
+        <div class="box b">Waarde</div>
+        <div class="box c">vanAf</div>
+        <div class="box d">tot</div>
+        <div class="box e">toelichting</div>
+    </div>
+    <div class="row" *ngFor="let waardelijstentry of waardelijstentries" >
+        <div class="box a">{{waardelijstentry.code}}</div>
+        <div class="box b">{{waardelijstentry.waarde}}</div>
+        <div class="box c">{{formatDate(waardelijstentry.vanAf)}}</div>
+        <div class="box d">{{formatDate(waardelijstentry.tot)}}</div>
+        <div class="box e">{{waardelijstentry.toelichting}}</div>
+    </div>
+
+</div>

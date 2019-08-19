@@ -24,7 +24,9 @@ export class WaardelijstentriesService extends BaseService {
     /** GET all waardelijstentries from the server */
     getWaardelijstentries(waardelijst: Waardelijst): Observable<WaardelijstEntry[]> {
         const waardelijstnaam = waardelijst.name;
-        const url = `${this.waardelijstenUrl}/${waardelijstnaam}`;
+        const url = `${this.waardelijstUrl}/${waardelijstnaam}`;
+
+        this.logd("WaardelijstentriesService","WaardelijstentriesService, get url: " + url);
         return this.http.get<WaardelijstEntry[]>(url)
             .pipe(
                 tap(_ => this.logd('waardelijstentrie', 'fetched waardelijstentries')),

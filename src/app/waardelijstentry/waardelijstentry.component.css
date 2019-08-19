@@ -1,0 +1,28 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 40px 300px 100px 100px 1fr;
+    grid-template-right: 1fr;
+    color: #444;
+}
+
+.row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 40px 300px 100px 100px 1fr;
+    grid-template-right: 1fr;
+}
+
+.row header {
+    position: fixed;
+    top: 0px;
+}
+
+.box {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.wrapper {
+    overflow-y: scroll;
+    height: 400px;
+}

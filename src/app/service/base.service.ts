@@ -7,6 +7,7 @@ import {MessageService} from './message.service';
 })
 export class BaseService {
     protected waardelijstenUrl = 'http://localhost:8080/waardelijsten';
+    protected waardelijstUrl = 'http://localhost:8080/waardelijst';
 
     constructor(private messageService: MessageService) {
     }
